@@ -21,7 +21,15 @@ This repository contains a basic FastAPI application that is containerized using
    cd Docker-FastAPI
    ```
 
-3. Build the Docker image (you can call it however you like):
+3. Install the required Python dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+   This will install the necessary dependencies for the FastAPI application.
+
+
+4. Build the Docker image (you can call it however you like):
 
    ```bash
    docker build -t fastapi-app .
@@ -29,7 +37,8 @@ This repository contains a basic FastAPI application that is containerized using
 
    This will build the Docker image based on the provided Dockerfile.
 
-4. Run the Docker container:
+
+5. Run the Docker container:
 
    ```bash
    docker run -d -p 8000:8000 fastapi-app
@@ -37,7 +46,8 @@ This repository contains a basic FastAPI application that is containerized using
 
    This will start the FastAPI application inside the Docker container and map port 8000 on the host to port 8000 inside the container.
 
-5. Access the application:
+
+6. Access the application:
 
    Open your web browser and go to [http://localhost:8000](http://localhost:8000). You should see the FastAPI application running.
 
